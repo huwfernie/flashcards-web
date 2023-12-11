@@ -105,7 +105,8 @@ html.mode-prod .view {
   justify-content: space-around;
 }
 
-.App a, .App a:visited {
+.App a,
+.App a:visited {
   color: var(--main-link-color);
 }
 
@@ -171,6 +172,14 @@ html.mode-prod .view-menu.view-middle {
   }
 }
 
+/* Dark mode */
+html.theme-dark body {
+  --main-background-color: black;
+  --main-text-color: Snow;
+  --main-border-color: Gainsboro;
+  --main-link-color: blue;
+}
+
 /* Retro mode */
 html.theme-retro body {
   --main-background-color: black;
@@ -186,6 +195,7 @@ Screen Width Breakpoints
 body {
   font-size: 20px;
 }
+
 @media screen and (min-width: 600px) {
   body {
     font-size: 24px;

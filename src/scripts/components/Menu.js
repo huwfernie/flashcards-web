@@ -10,6 +10,16 @@ function Menu({ store }) {
     store.setActiveView(name);
     store.toggleMenu();
   }
+
+  function changeTheme() {
+    const themes = ["light", "dark", "retro"];
+    let activeTheme = themes.find((el) => {
+      return document.documentElement.classList.contains(`theme-${el}`);
+    });
+    const newTheme = themes[themes.indexOf(activeTheme) + 1] || themes[0];
+    document.documentElement.classList.replace(`theme-${activeTheme}`, `theme-${newTheme}`);
+  }
+
   return (
     <div className={"view view-menu" + _className}>
       <TitleBar title="Menu" version="closeMenu" store={store} />
@@ -19,6 +29,7 @@ function Menu({ store }) {
           <li><p onClick={() => changePage("chapters")}>Chapters</p></li>
           <li><p onClick={() => changePage("questions")}>Questions</p></li>
           <li><p onClick={() => changePage("question")}>Question</p></li>
+          <li><p onClick={changeTheme}>Change Theme</p></li>
           <li><p onClick={store.toggleMenu}>Close</p></li>
         </ul>
       </div>
