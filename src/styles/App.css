@@ -67,6 +67,9 @@ html.mode-prod .view {
 .content {
   padding-top: 26vh;
 }
+.mode-dev .content {
+  padding-top: 30%;
+}
 
 .question-text {
   display: inline-block;
