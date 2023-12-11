@@ -6,12 +6,13 @@
                 "title": "Front-end basics",
                 "questions": [
                     {
-                        "questionText": "What does **HTML** stand for",
-                        "answerText": "HTML is an acronym for Hyper Text Markup Language"
+                        "questionText": "What does **HTML** stand for?",
+                        "answerText": "HTML is an acronym for Hyper Text Markup Language.",
+                        "externalLink": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
                     },
                     {
-                        "questionText": "What is **The DOM**",
-                        "answerText": "The Document Object Model (DOM) is a programming interface for web documents"
+                        "questionText": "What is **The DOM**?",
+                        "answerText": "The Document Object Model (DOM) is a programming interface for web documents."
                     }
                 ]
             },
@@ -19,12 +20,12 @@
                 "title": "JavaScript basics",
                 "questions": [
                     {
-                        "questionText": "How many primitive data types are there in JavaScript",
+                        "questionText": "How many primitive data types are there in JavaScript?",
                         "answerText": "8"
                     },
                     {
-                        "questionText": "What are the 8 primitive data types in JavaScript",
-                        "answerText": "Null, Undefined, Object, Array, Symbol, String, Boolian, Number"
+                        "questionText": "What are the 8 primitive data types in JavaScript?",
+                        "answerText": "<ol><li>Null</li><li>Undefined</li><li>Object</li><li>Array</li><li>Symbol</li><li>String</li><li>Boolian</li><li>Number</li></ol>"
                     }
                 ]
             }

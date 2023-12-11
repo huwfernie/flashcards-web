@@ -109,12 +109,12 @@ function App() {
 
   return (
     <div className={"App " + activeView}>
-      <Menu store={store} />
       <Decks data={appData} store={store} />
       <Chapters data={appData} store={store} />
       <Questions data={appData} store={store} />
       <Question answer={store.showAnswer} data={appData} store={store} />
       {/* <Question answer="true" data={appData} store={store} /> */}
+      <Menu store={store} />
     </div>
   );
 }
