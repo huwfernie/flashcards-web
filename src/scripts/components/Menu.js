@@ -3,6 +3,8 @@ import React from 'react';
 import Footer from './Footer.js';
 import TitleBar from './Header.js';
 
+import { localStorage } from '../handlers/index.js';
+
 function Menu({ store }) {
   let _className = store.menuOpen === true ? " open view-middle" : " close view-right";
 
@@ -18,7 +20,7 @@ function Menu({ store }) {
     });
     const newTheme = themes[themes.indexOf(activeTheme) + 1] || themes[0];
     document.documentElement.classList.replace(`theme-${activeTheme}`, `theme-${newTheme}`);
-    window.localStorage.setItem("theme", `theme-${newTheme}`);
+    localStorage.set("theme", `theme-${newTheme}`);
   }
 
   return (

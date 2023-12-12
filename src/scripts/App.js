@@ -8,15 +8,24 @@ import Menu from './components/Menu.js';
 
 import '../styles/App.css';
 
+import { localStorage } from './handlers/index.js';
+
 const data = require('../data.json');
 
+const history = {
+  deckIndex: localStorage.get("deckIndex") || 0,
+  chapterIndex: localStorage.get("chapterIndex") || 0,
+  questionIndex: localStorage.get("questionIndex") || 0,
+  activeView: localStorage.get("activeView") || "decks"
+}
+
 function App() {
-  const [appData, setAppData] = useState(data);
-  const [deckIndex, setDeckIndex] = useState(0);
-  const [chapterIndex, setChapterIndex] = useState(0);
-  const [questionIndex, setQuestionIndex] = useState(0);
+  const [appData] = useState(data);
+  const [deckIndex, setDeckIndex] = useState(history.deckIndex);
+  const [chapterIndex, setChapterIndex] = useState(history.chapterIndex);
+  const [questionIndex, setQuestionIndex] = useState(history.questionIndex);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeView, setActiveView] = useState("decks");
+  const [activeView, setActiveView] = useState(history.activeView);
   const views = ["decks", "chapters", "questions", "question"];
   const [showAnswer, setShowAnswer] = useState(false);
 
@@ -44,13 +53,15 @@ function App() {
     const length = views.length - 1;
     if (index + 1 <= length) {
       setActiveView(views[index + 1]);
+      localStorage.set("activeView", views[index + 1]);
     }
   }
-
+  
   function showPrevView() {
     let index = views.indexOf(activeView);
     if (index > 0) {
       setActiveView(views[index - 1]);
+      localStorage.set("activeView", views[index - 1]);
     }
   }
 
@@ -58,18 +69,21 @@ function App() {
     // setActiveView("chapters");
     showNextView();
     setDeckIndex(index);
+    localStorage.set("deckIndex", index);
   }
   
   function loadChapterIndex(index) {
     // setActiveView("questions");
     showNextView();
     setChapterIndex(index);
+    localStorage.set("chapterIndex", index);
   }
   
   function loadQuestionIndex(index) {
     // setActiveView("question");
     showNextView();
     setQuestionIndex(index);
+    localStorage.set("questionIndex", index);
   }
   
   function toggleMenu() {
