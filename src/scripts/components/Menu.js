@@ -18,6 +18,7 @@ function Menu({ store }) {
     });
     const newTheme = themes[themes.indexOf(activeTheme) + 1] || themes[0];
     document.documentElement.classList.replace(`theme-${activeTheme}`, `theme-${newTheme}`);
+    window.localStorage.setItem("theme", `theme-${newTheme}`);
   }
 
   return (

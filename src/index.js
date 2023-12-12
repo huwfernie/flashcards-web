@@ -4,6 +4,9 @@ import './styles/index.css';
 import App from './scripts/App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 // import reportWebVitals from './reportWebVitals';
+import Head from './scripts/Head';
+
+Head.init();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
