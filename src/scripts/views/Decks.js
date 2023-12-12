@@ -10,7 +10,7 @@ function Decks({data, store}) {
     <div className={`view view-decks ${name}`}>
       <TitleBar title="Decks" store={store} />
       <List data={data} storeValue={store.deckIndex} storeHandler={store.loadDeckIndex} />
-      <Footer store={store} />
+      <Footer store={store} version="default" />
     </div>
   );
 }

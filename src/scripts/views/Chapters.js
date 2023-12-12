@@ -10,7 +10,7 @@ function Chapters({data, store}) {
     <div className={`view view-chapters ${name}`}>
       <TitleBar title="Chapters" store={store} version="backMenu" />
       <List data={data[store.deckIndex].chapters} storeValue={store.chapterIndex} storeHandler={store.loadChapterIndex} />
-      <Footer store={store} />
+      <Footer store={store} version="default" />
     </div>
   );
 }

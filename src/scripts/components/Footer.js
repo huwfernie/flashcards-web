@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer({ store, version, toggleAnswer }) {
+function Footer({ store, version }) {
 
     if (version === "question") {
         return (

@@ -10,7 +10,7 @@ function Questions({data, store}) {
     <div className={`view view-questions ${name}`}>
       <TitleBar title="Questions" store={store} version="backMenu" />
       <List data={data[store.deckIndex].chapters[store.chapterIndex].questions} storeValue={store.questionIndex} storeHandler={store.loadQuestionIndex} />
-      <Footer store={store} />
+      <Footer store={store} version="default" />
     </div>
   );
 }
