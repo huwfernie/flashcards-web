@@ -4,7 +4,7 @@ function List({ data, storeValue, storeHandler }) {
     return (
         <div className="list">
             <ul>
-                <Items data={data} store={{ storeValue: storeValue, storeHandler: storeHandler }} />
+                <Items data={data} store={{ storeValue, storeHandler }} />
             </ul>
 
         </div>
@@ -17,6 +17,7 @@ function Items({ data, store }) {
             // Items will have a Title or a questionText key/value
             let _text = item.title;
             if (item.title === undefined) {
+                // set text to questionText value, then trim to 18 charechters long
                 _text = item.questionText.replace(/\*/g, "").substring(0, 18).trim() + '...';
             }
 
@@ -30,7 +31,8 @@ function Items({ data, store }) {
             )
         })
     } catch (error) {
-        return null;
+        console.log(error);
+        return <li>Items cannot be loaded</li>;
     }
 }
 
