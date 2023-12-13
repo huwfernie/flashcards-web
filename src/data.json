@@ -46,16 +46,18 @@
                         "answerText": "**let** allows block-scoping, **const** defines constants, and **var** is function-scoped."
                     },
                     {
-                        "questionText" : "What is the purpose of closures in JavaScript?",
-                        "answerText": "Closures allow functions to retain access to variables from their containing scope."
+                        "questionText" : "What is the purpose of **closures** in JavaScript?",
+                        "answerText": "**Closures** allow functions to retain access to variables from their containing **scope**."
                     },
                     {
-                        "questionText" : "Describe the event delegation in JavaScript.",
-                        "answerText": "Event delegation involves using a single event listener for multiple elements."
+                        "questionText" : "Describe the **event delegation** in JavaScript.",
+                        "answerText": "**Event delegation** involves using a single event listener for multiple elements."
                     },
                     {
-                        "questionText" : "How does prototypal inheritance work in JavaScript?",
-                        "answerText": "Prototypal inheritance allows objects to inherit properties and methods from prototypes."
+                        "questionText" : "How does **prototypal inheritance** work in JavaScript?",
+                        "answerText": "**Prototypal inheritance** allows objects to inherit properties and methods from prototypes.",
+                        "codeExample": "// child is an object that inherits from parent\nconst child = {\n\t__proto__: parent\n};",
+                        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
                     },
                     {
                         "questionText" : "Explain the concept of hoisting in JavaScript.",

@@ -30,6 +30,7 @@ function Question({ data, store, answer = false }) {
         <TitleBar title={_title} store={store} version="backMenu" />
         <div className="content">
           <p className="question-text" dangerouslySetInnerHTML={{ __html: _text }}></p>
+          {question.codeExample !== undefined && answer === true ? <pre><code>{question.codeExample}</code></pre> : null}
           {question.externalLink !== undefined && answer === true ? <p><a className="external-link" href={question.externalLink}>Learn More</a></p> : null}
         </div>
         <Footer store={store} version="question" />

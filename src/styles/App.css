@@ -66,10 +66,8 @@ html.mode-prod .view {
 }
 
 .content {
-  padding-top: 26vh;
-}
-.mode-dev .content {
-  padding-top: 30%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .question-text {
@@ -78,6 +76,16 @@ html.mode-prod .view {
 
 .question-text ol {
   text-align: left;
+}
+
+pre {
+  font-size: 0.7em;
+  text-align: left;
+  background-color: Gainsboro;
+  color: black;
+  padding: 0.5em;
+  display: block;
+  overflow-x: scroll;
 }
 
 .header {
