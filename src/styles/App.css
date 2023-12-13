@@ -190,7 +190,7 @@ html.theme-dark body {
   --main-background-color: black;
   --main-text-color: Snow;
   --main-border-color: Gainsboro;
-  --main-link-color: blue;
+  --main-link-color: DodgerBlue;
 }
 
 /* Retro mode */
@@ -198,7 +198,7 @@ html.theme-retro body {
   --main-background-color: black;
   --main-text-color: MediumSeaGreen;
   --main-border-color: ForestGreen;
-  --main-link-color: LawnGreen;
+  --main-link-color: LimeGreen;
 }
 
 /*
