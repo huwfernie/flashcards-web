@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Decks from './views/Decks.js';
 import Chapters from './views/Chapters.js';
@@ -10,8 +10,6 @@ import '../styles/App.css';
 
 import { localStorage } from './handlers/index.js';
 
-const data = require('../data.json');
-
 const history = {
   deckIndex: localStorage.get("deckIndex") || 0,
   chapterIndex: localStorage.get("chapterIndex") || 0,
@@ -20,7 +18,7 @@ const history = {
 }
 
 function App() {
-  const [appData] = useState(data);
+  const [appData, setAppData] = useState(null);
   const [deckIndex, setDeckIndex] = useState(history.deckIndex);
   const [chapterIndex, setChapterIndex] = useState(history.chapterIndex);
   const [questionIndex, setQuestionIndex] = useState(history.questionIndex);
@@ -29,18 +27,33 @@ function App() {
   const views = ["decks", "chapters", "questions", "question"];
   const [showAnswer, setShowAnswer] = useState(false);
 
+
+  useEffect(() => {
+    async function setup() {
+      // const data = require('../../public/data.json');
+      let data = await fetch("./data.json");
+      data = await data.json();
+      setAppData(data);
+    }
+    setup();
+  }, []);
+
+  if (appData === null) {
+    return <div>waiting for data</div>
+  }
+
   function toggleAnswer() {
     setShowAnswer(!showAnswer);
   }
 
   function nextQuestion() {
-    let _length = data[store.deckIndex].chapters[store.chapterIndex].questions.length;
+    let _length = appData[store.deckIndex].chapters[store.chapterIndex].questions.length;
     if (questionIndex < _length - 1) {
       setQuestionIndex(questionIndex + 1);
       setShowAnswer(false);
     }
   }
-  
+
   function prevQuestion() {
     if (questionIndex > 0) {
       setQuestionIndex(questionIndex - 1);
@@ -56,7 +69,7 @@ function App() {
       localStorage.set("activeView", views[index + 1]);
     }
   }
-  
+
   function showPrevView() {
     let index = views.indexOf(activeView);
     if (index > 0) {
@@ -71,21 +84,21 @@ function App() {
     setDeckIndex(index);
     localStorage.set("deckIndex", index);
   }
-  
+
   function loadChapterIndex(index) {
     // setActiveView("questions");
     showNextView();
     setChapterIndex(index);
     localStorage.set("chapterIndex", index);
   }
-  
+
   function loadQuestionIndex(index) {
     // setActiveView("question");
     showNextView();
     setQuestionIndex(index);
     localStorage.set("questionIndex", index);
   }
-  
+
   function toggleMenu() {
     setMenuOpen(!menuOpen);
   }

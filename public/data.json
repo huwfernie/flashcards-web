@@ -1,0 +1,266 @@
+[
+    {
+        "title": "Senior Development",
+        "chapters": [
+            {
+                "title": "Front-end basics",
+                "questions": [
+                    {
+                        "questionText": "What does **HTML** stand for?",
+                        "answerText": "HTML is an acronym for Hyper Text Markup Language.",
+                        "externalLink": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+                    },
+                    {
+                        "questionText": "What is **The DOM**?",
+                        "answerText": "The Document Object Model (DOM) is a programming interface for web documents."
+                    }
+                ]
+            },
+            {
+                "title": "JavaScript basics",
+                "questions": [
+                    {
+                        "questionText": "How many primitive data types are there in JavaScript?",
+                        "answerText": "8"
+                    },
+                    {
+                        "questionText": "What are the 8 primitive data types in JavaScript?",
+                        "answerText": "<ol><li>Null</li><li>Undefined</li><li>Object</li><li>Array</li><li>Symbol</li><li>String</li><li>Boolian</li><li>Number</li></ol>"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Development GPT",
+        "chapters": [
+            {
+                "title": "Chapter 1",
+                "questions": [
+                    {
+                        "questionText": "What is JavaScript and why is it used?",
+                        "answerText": "JavaScript is a scripting language used to create and control dynamic content on websites."
+                    },
+                    {
+                        "questionText": "Explain the difference between **let**, **const**, and **var** in JavaScript.",
+                        "answerText": "**let** allows block-scoping, **const** defines constants, and **var** is function-scoped."
+                    },
+                    {
+                        "questionText": "What is the purpose of **closures** in JavaScript?",
+                        "answerText": "**Closures** allow functions to retain access to variables from their containing **scope**."
+                    },
+                    {
+                        "questionText": "Describe the **event delegation** in JavaScript.",
+                        "answerText": "**Event delegation** involves using a single event listener for multiple elements."
+                    },
+                    {
+                        "questionText": "How does **prototypal inheritance** work in JavaScript?",
+                        "answerText": "**Prototypal inheritance** allows objects to inherit properties and methods from prototypes.",
+                        "codeExample": "// child is an object that inherits from parent\nconst child = {\n\t__proto__: parent\n};",
+                        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+                    },
+                    {
+                        "questionText": "Explain the concept of hoisting in JavaScript.",
+                        "answerText": "Hoisting moves variable and function declarations to the top of their containing scope."
+                    },
+                    {
+                        "questionText": "What is the significance of the **this** keyword in JavaScript?",
+                        "answerText": "**this** refers to the current execution context and can be influenced by how a function is called."
+                    },
+                    {
+                        "questionText": "Differentiate between **null** and **undefined** in JavaScript.",
+                        "answerText": "**null** is an intentionally empty value, while **undefined** means a variable has been declared but not assigned."
+                    },
+                    {
+                        "questionText": "How can you handle asynchronous operations in JavaScript?",
+                        "answerText": "Promises, callbacks, or async/await are common techniques for handling asynchronous tasks."
+                    },
+                    {
+                        "questionText": "What is the difference between *synchronous* and *asynchronous* code?",
+                        "answerText": "*Synchronous* code executes line by line, while *asynchronous* code doesn't wait for tasks to complete."
+                    }
+                ]
+            },
+            {
+                "title": "Chapter 2",
+                "questions": [
+                    {
+                        "questionText": "Explain the role of *the event loop* in JavaScript.",
+                        "answerText": "*The event loop* manages the execution of code, handling callbacks and maintaining responsiveness."
+                    },
+                    {
+                        "questionText": "How does **AJAX** work, and what is its role in JavaScript?",
+                        "answerText": "**AJAX** (Asynchronous JavaScript and XML) enables asynchronous data exchange with a server."
+                    },
+                    {
+                        "questionText": "What are **callbacks**, **promises**, and **async/await**? How do they relate to asynchronous programming?",
+                        "answerText": "**Callbacks** are functions passed as arguments, **promises** handle async operations, and **async/await** simplifies promise-based code."
+                    },
+                    {
+                        "questionText": "Describe the purpose of the **bind**, **call**, and **apply** methods in JavaScript.",
+                        "answerText": "**bind** creates a new function with a specified this value; **call** and **apply** invoke functions with a specific this."
+                    },
+                    {
+                        "questionText": "What is the purpose of the **map** function in JavaScript?",
+                        "answerText": "The **map** function creates a new array by applying a provided function to each element."
+                    },
+                    {
+                        "questionText": "Explain the differences between **==** and **===** in JavaScript.",
+                        "answerText": "**==** performs type coercion, while **===** checks both value and type equality."
+                    },
+                    {
+                        "questionText": "What are **arrow functions** and how do they differ from regular functions?",
+                        "answerText": "**Arrow functions** \"() => {}\" are concise syntax for anonymous functions, with a lexical this binding."
+                    },
+                    {
+                        "questionText": "Describe the use of the **localStorage** and **sessionStorage** objects.",
+                        "answerText": "**localStorage** and **sessionStorage** provide web storage solutions for client-side data."
+                    },
+                    {
+                        "questionText": "How can you handle **cross-origin resource sharing** (CORS) in JavaScript?",
+                        "answerText": "**CORS** permits or restricts cross-origin HTTP requests in a browser."
+                    },
+                    {
+                        "questionText": "What is the purpose of the **try**, **catch**, and **finally** blocks in JavaScript?",
+                        "answerText": "**try** allows code execution, **catch** handles exceptions, and **finally** executes regardless of errors."
+                    }
+                ]
+            },
+            {
+                "title": "Chapter 3",
+                "questions": [
+                    {
+                        "questionText": "Explain the concept of **promise chaining**.",
+                        "answerText": "**Promise chaining** involves linking promises together to handle sequential async operations."
+                    },
+                    {
+                        "questionText": "How does the JavaScript event loop handle callback queues and microtasks?",
+                        "answerText": "The event loop processes callback queues and microtasks, ensuring non-blocking behavior."
+                    },
+                    {
+                        "questionText": "Discuss the differences between **ES6 classes** and **prototype-based inheritance**.",
+                        "answerText": "**ES6 classes** provide a syntax (using the **Class** decaration keyword) for defining classes, while **prototype-based inheritance** directly manipulates prototypes. (setting the **__proto__** value on child to be a parent object)"
+                    },
+                    {
+                        "questionText": "What is the role of the **let** and **const** keywords?",
+                        "answerText": "**let** and **const** declare block-scoped variables, improving variable scope management."
+                    },
+                    {
+                        "questionText": "Explain the concept of **memoization** in JavaScript.",
+                        "answerText": "**Memoization** involves caching function results to optimize performance by avoiding redundant computations."
+                    },
+                    {
+                        "questionText": "What is a **closure** and how is it useful?",
+                        "answerText": "A **closure** is a function bundled with its lexical environment, preserving access to outer scope variables."
+                    },
+                    {
+                        "questionText": "How do you handle **errors** in asynchronous JavaScript code?",
+                        "answerText": "Errors in asynchronous code are handled using **try, catch, and finally** blocks."
+                    },
+                    {
+                        "questionText": "Describe the purpose of the **spread** and rest operators.",
+                        "answerText": "The **spread** (...) syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. The **rest** parameter syntax allows a function to accept an indefinite number of arguments as an array"
+                    },
+                    {
+                        "questionText": "What is the purpose of the **Symbol** data type in JavaScript?",
+                        "answerText": "**Symbol** is a primitive data type used for creating unique identifiers."
+                    },
+                    {
+                        "questionText": "Explain the concept of **currying** in JavaScript.",
+                        "answerText": "**Currying** is a technique of transforming a function with multiple arguments into a sequence of functions."
+                    }
+                ]
+            },
+            {
+                "title": "Chapter 4",
+                "questions": [
+                    {
+                        "questionText": "How does the **async** keyword work in JavaScript?",
+                        "answerText": "The **async** keyword is used to define asynchronous functions, returning promises."
+                    },
+                    {
+                        "questionText": "Discuss the differences between **document.ready** and **window.onload**.",
+                        "answerText": "**document.ready** triggers when the DOM is ready, while **window.onload** waits for all assets to load. In practice this means XX will fire before XX"
+                    },
+                    {
+                        "questionText": "What is the **Event Bubbling** and **Event Capturing** in JavaScript?",
+                        "answerText": "**Event Bubbling** (normal) propagates events from the target element to the root (<a>, <div>, <body>, <html>) , while **Event Capturing** (unusual) is the reverse."
+                    },
+                    {
+                        "questionText": "How does the **fetch API** differ from traditional AJAX requests?",
+                        "answerText": "The **fetch API** is a modern alternative to XMLHttpRequest for making HTTP requests."
+                    },
+                    {
+                        "questionText": "Explain the concept of **debouncing** in JavaScript.",
+                        "answerText": "**Debouncing** delays function execution until after a certain time period."
+                    },
+                    {
+                        "questionText": "Discuss the differences between **localStorage** and **sessionStorage**.",
+                        "answerText": "**localStorage** stores data with no expiration date, while **sessionStorage** stores data for a session."
+                    },
+                    {
+                        "questionText": "What is the purpose of the **reduce** function in JavaScript?",
+                        "answerText": "The **reduce** function \"array.reduce(func)\"reduces an array to a single value using a provided function."
+                    },
+                    {
+                        "questionText": "Explain the concept of **WebSockets** and their use in JavaScript.",
+                        "answerText": "**WebSockets** provide full-duplex communication channels over a single TCP connection."
+                    },
+                    {
+                        "questionText": "How can you optimize the performance of JavaScript code?",
+                        "answerText": "JavaScript performance can be optimized through code minification, reducing HTTP requests, and optimizing images."
+                    },
+                    {
+                        "questionText": "Describe the role of the **yield** keyword in generators.",
+                        "answerText": "The **yield** keyword pauses a generator function and yields a value to the caller."
+                    }
+                ]
+            },
+            {
+                "title": "Chapter 5",
+                "questions": [
+                    {
+                        "questionText": "What is the purpose of the **async** attribute in script tags?",
+                        "answerText": "The **async** attribute loads scripts asynchronously, allowing the HTML parsing to continue."
+                    },
+                    {
+                        "questionText": "How does the **map** method differ from the **forEach** method in JavaScript?",
+                        "answerText": "The **map** method creates a new array, while **forEach** iterates over array elements without creating a new array."
+                    },
+                    {
+                        "questionText": "Explain the use of the **fetch API** for making HTTP requests.",
+                        "answerText": "The **fetch API** simplifies HTTP requests with a more modern and flexible interface."
+                    },
+                    {
+                        "questionText": "Discuss the differences between **mutable** and **immutable** data types in JavaScript.",
+                        "answerText": "**Mutable** data can be changed after creation, while **immutable** data cannot be changed."
+                    },
+                    {
+                        "questionText": "What is the purpose of the **transition** and **transform** properties in CSS?",
+                        "answerText": "The **transition** property controls the **transition** effect, and transform applies 2D or 3D transformations in CSS."
+                    },
+                    {
+                        "questionText": "How do you handle memory leaks in JavaScript?",
+                        "answerText": "Memory leaks can be avoided by cleaning up event listeners and circular references."
+                    },
+                    {
+                        "questionText": "Describe the role of the **querySelector** and **getElementById** methods.",
+                        "answerText": "**querySelector** selects the first element matching a CSS selector, and **getElementById** retrieves an element by its ID."
+                    },
+                    {
+                        "questionText": "Explain the concept of **lazy loading** in JavaScript.",
+                        "answerText": "**Lazy loading** defers the loading of non-critical resources until they are needed."
+                    },
+                    {
+                        "questionText": "Discuss the benefits of using a framework like **React** or **Angular**.",
+                        "answerText": "**React** and **Angular** offer reusable components, virtual DOM, and declarative syntax for building user interfaces."
+                    },
+                    {
+                        "questionText": "What is the significance of the **defer** attribute in script tags?",
+                        "answerText": "The **defer** attribute delays script execution until the HTML parsing is complete."
+                    }
+                ]
+            }
+        ]
+    }
+]
