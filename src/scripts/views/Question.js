@@ -22,6 +22,8 @@ function Question({ data, store, answer = false }) {
       _text = question.answerText;
     }
 
+    _text = _text.replace(/>/g, "&gt;");
+    _text = _text.replace(/</g, "&lt;");
     _text = _text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
     _text = _text.replace(/\*(.*?)\*/g, "<em>$1</em>");
 
