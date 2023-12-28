@@ -1,7 +1,8 @@
 const localStorage = {
     set: function(key, value) {
+        // console.log(key, value);
         const testKey = typeof(key) === "string" && key !== "";
-        const testValue = typeof(value) === "string" && value !== "";
+        const testValue = value !== undefined;
         if (testKey && testValue) {
             try {
                 window.localStorage.setItem(key, value);
@@ -12,6 +13,7 @@ const localStorage = {
     },
     
     get: function(key) {
+        // console.log(key, window.localStorage.getItem(key));
         if (typeof(key) === "string" && key !== "") {
             return window.localStorage.getItem(key);
         } else {
