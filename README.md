@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Flashcards
+
+## About
+
+This is a simple text-based flashcards app that comes with a set of ChatGPT sample questions that may help (or not) in preparing for JavaScript job interviews.
+
+## Getting Started
+
+Use `npm run start` to launch the development server and you can see the page at [http://localhost:3000/](http://localhost:3000/)
+
+This project is live on Vercel [https://flashcards-web-mu.vercel.app/](https://flashcards-web-mu.vercel.app/).
+
+## New Questions
+
+You can add/change your own questions by modifying the `./public/data.json` file [here](./public/data.json).
+
+For now this is just JSON data that is hand formatted, this snippet represents the one **book** with one **chapter** with two **questions**
+
+```
+[
+    {
+        "title": "My Book",
+        "chapters": [
+            {
+                "title": "Chapter 1. - Basics",
+                "questions": [
+                    {
+                        "questionText": "What does **HTML** stand for?",
+                        "answerText": "HTML is an acronym for Hyper Text Markup Language."
+                    },
+                    {
+                        "questionText": "How does **prototypal inheritance** work in JavaScript?",
+                        "answerText": "**Prototypal inheritance** allows objects to inherit properties & methods from prototypes.",
+                        "codeExample": "// child is an object that inherits from parent\nconst child = {\n\t__proto__: parent\n};",
+                        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+                    }
+                ]
+            }
+        ]
+    },
+```
+
+**Note:** Questiosn in JSON data must have `"questionText"` and `"answerText"` supplied, with optional extra detail in `"codeExample"` and `"externalLink"` properties.
+
+
+## Navigation
+
+This page doesn't use a traditional url based routing, instead state is stored in the windows localStorage and different page *views* are transitioned based on HTML class names together with CSS.
+
+You can move forward in navigation by clicking on a list item (book name/chapter name/question name), there is a generic *back* button, or you can open the *menu* and then jump forward/backwards to a new section.
+
+When you re-open the app you should jump back to where you left off as state is updated in localStorage as you navigate through the different views.
+
+
+## Debugging
+
+This page doesn't use a traditional url based routing, instead state is stored in the windows localStorage and different page *views* are transitioned based on HTML class names together with CSS.
+
+for easy debugging of the inter-related views and state - each view you can change the class name on the HTML element from **mode-prod** to **mode-dev** which will then show all available views at a reduced scale on a single page.
+
+Production:
+
+`<html lang="en" class="mode-prod ...`
+
+Dev / Debugging
+
+`<html lang="en" class="mode-dev ...`
+
+
+## Ref:
+
+This project is based upon Create-React-App and their Progressive Web App template.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
